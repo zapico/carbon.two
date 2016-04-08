@@ -6,7 +6,7 @@ class WelcomeController < ApplicationController
     @all.map {|c| c.amount = co2}
     
     @co2 = Conversion.find(25)
-    @co2.amount = co2
+    #@co2.amount = co2
     
     @random = @all.sample
     if @random.amount < 1 then
