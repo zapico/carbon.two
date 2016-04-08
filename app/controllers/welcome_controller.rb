@@ -8,9 +8,9 @@ class WelcomeController < ApplicationController
     @co2 = Conversion.find(25)
     @co2.amount = co2
     
-    @random = @all.rand
+    @random = @all.sample
     if @random.amount < 1 then
-      @random = @all.rand
+      @random = @all.sample
     end
   end
 
