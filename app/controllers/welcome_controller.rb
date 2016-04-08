@@ -3,7 +3,7 @@ class WelcomeController < ApplicationController
   def index
     @all = Conversion.all
     
-    @all.map {|c| c.amount = co2}
+    @all.map {|c| c.amount = 1}
     
     @co2 = Conversion.find(25)
     #@co2.amount = co2
