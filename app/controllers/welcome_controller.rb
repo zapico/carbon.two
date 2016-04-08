@@ -1,11 +1,11 @@
 class WelcomeController < ApplicationController
 
   def index
-    @all = Conversion.find(:all, :order => "category_id")
+    @all = Conversion.all
     
     @all.map {|c| c.amount = co2}
     
-    @co2 = Conversion.find(:first, :conditions => {:slug => "co2"})
+    @co2 = Conversion.find(25)
     @co2.amount = co2
     
     @random = @all.rand
