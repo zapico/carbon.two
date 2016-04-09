@@ -2,7 +2,7 @@ class ConversionController < ApplicationController
   #caches_page :data
     
   def index
-    @all = Conversion.all().order(:category_id)
+    @all = Conversion.order(:category_id)
     @all.map {|c| c.amount = co2}
     
     respond_to do |format|
