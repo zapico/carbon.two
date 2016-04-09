@@ -3,11 +3,11 @@ class Conversion < ActiveRecord::Base
   attr_accessor :amount
   
   def amount=(co2)
-    write_attribute(:amount, (co2/self.carbon).round)
+     @amount = (co2/self.carbon).round
   end
 
   def amount
-    read_attribute(:amount).to_i
+    @amount.to_i
   end
   
   def style(n)
